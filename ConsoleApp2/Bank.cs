@@ -17,5 +17,22 @@ namespace ConsoleApp2
             }
             return null;
         }
+        public BankCard GetBankCardWithPIN(int PIN)
+        {
+            foreach (var client in Clients)
+            {
+                if (PIN == client.Bank_card.PIN) return client.Bank_card;
+            }
+            return null;
+        }
+
+        public Client GetClientWithBankCard(BankCard bank_card)
+        {
+            foreach (var client in Clients)
+            {
+                if (bank_card == client.Bank_card) return client;
+            }
+            return null;
+        }
     }
 }
