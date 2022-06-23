@@ -71,6 +71,7 @@ namespace ConsoleApp2
         {
             while (true)
             {
+                Console.Clear();
                 BankCard CurrentBankCard = null;
                 Client CurrentClient = null;
                 string operation = null;
@@ -125,7 +126,7 @@ namespace ConsoleApp2
                                     Console.WriteLine($"Current Balance : {CurrentBankCard.Balance}");
                                 }
                                 else if (select == 3)
-                                {
+                                { 
                                     CurrentClient.ShowAllOperations();
                                 }
                                 else if (select == 4)
